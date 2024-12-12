@@ -157,7 +157,25 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               />
             </div>
           </motion.div>
-        </div></> : <div>Form submitted</div>}
+        </div></> : <div className="relative pb-20 pt-40">
+              <div className="before:absolute before:top-20 before:-left-20 before:z-[-1] before:content-abstractwaves">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                >
+                  <HText>
+                    Your email has been sent.{" "}
+                    <span className="text-primary-500">Thank you!</span>
+                  </HText>
+                </motion.div>
+              </div>
+            </div>}
         
 
       </motion.div>
