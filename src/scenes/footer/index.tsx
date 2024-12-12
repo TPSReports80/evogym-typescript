@@ -1,5 +1,5 @@
-import Logo from "@/assets/Logo.png";
 import styles from '@/share/styles.module.css'
+
 const Footer = () => {
   return (
     <footer className="bg-primary-100 py-16">
