@@ -9,6 +9,7 @@ import SponsorFortune from "@/assets/SponsorFortune.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import HText from "@/share/HText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -36,7 +37,9 @@ const Home = ({ setSelectedPage }: Props) => {
           >
             <div className="relative">
               <div className="before:absolute before:-top-20 md:before:content-evolvetext before:-left-20 before:z-[-1]">
-                <img src={HomePageText} alt="homepage text" />
+                {/* <img src={HomePageText} alt="homepage text" /> */}
+                <h1 className="basis-3/5 font-montserrat text-7xl uppercase font-bold">MetaGym</h1>
+                <h5 className="text-4xl font-light">evolutionary fitness.</h5>
               </div>
             </div>
             <p className="mt-8 text-sm md:text-start">

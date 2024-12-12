@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Logo from "@/assets/Logo.png";
+import styles from '@/share/styles.module.css'
 import Link from "./Link";
 import { SelectedPage } from "@/share/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -24,7 +24,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
-            <img src={Logo} alt="logo" />
+          <div className="flex items-center gap-1 justify-start">
+            <h1 className="font-montserrat text-h1 uppercase font-bold">MetaGym</h1>
+            <span className={styles.logoDot}></span>
+          </div>
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm`}>
